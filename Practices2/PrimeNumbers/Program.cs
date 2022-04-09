@@ -72,7 +72,7 @@ namespace PrimeNumbers{
 
             while (i < 20)
             {
-                // Alınan değerler sayı değilse program devam ediyor
+                // Alınan değer sayı değilse sayı tekrar isteniyor.
                 Console.Write("{0}. sayıyı giriniz ",i+1);
                 try
                 {
