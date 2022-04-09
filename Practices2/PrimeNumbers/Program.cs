@@ -56,6 +56,26 @@ public class Operation{
         Console.Write("]");
     }
 }
+// extension method tanımlanıyor
+public static class Helper{
+    public static double Ortalama(this ArrayList list){
+        int toplam = 0;
+        double ortalama = 0;
+        foreach (var item in list)
+        {
+            toplam+=(int)item;
+        }
+        try
+        {
+            ortalama = toplam/list.Count;
+        }
+        catch (DivideByZeroException)
+        {
+            Console.WriteLine("0");
+        }
+        return ortalama;
+    }
+}
 
 
 namespace PrimeNumbers{
@@ -97,16 +117,22 @@ namespace PrimeNumbers{
                 Console.WriteLine("aa");
             }
 
+
             Operation operation = new();
             // listeler alınıyor
             asalSayilar = operation.Ayır(sayilar,true);
             asalOlmayanSayilar = operation.Ayır(sayilar,false);
+            
             // listeler yazdırılıyor
             Console.Write("\nAsal olan sayılar : ");
             operation.TersSiralaYazdir(asalSayilar);
+            Console.WriteLine("\nDizi adedi : {0}",asalSayilar.Count);
+            Console.WriteLine("Ortalaması : {0}",asalSayilar.Ortalama());
+            
             Console.Write("\nAsal olmayan sayılar : ");
             operation.TersSiralaYazdir(asalOlmayanSayilar);
-
+            Console.WriteLine("\nDizi adedi : {0}",asalOlmayanSayilar.Count);
+            Console.WriteLine("Ortalaması : {0}",asalOlmayanSayilar.Ortalama());
 
         }
     }
