@@ -12,5 +12,9 @@ namespace OOP
             Console.WriteLine("Boşaltım Yapar");
         }
         
+        public virtual void UyaranlaraTepki(){
+            Console.WriteLine("Canlılar uyaranlara tepki verir");
+        }
+        
     }
 }

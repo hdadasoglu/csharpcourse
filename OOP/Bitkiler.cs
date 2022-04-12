@@ -5,6 +5,10 @@ namespace OOP
         protected void Fotosentez(){
             Console.WriteLine("Fotosentez Yapar");
         }
+        public override void UyaranlaraTepki()
+        {
+            Console.WriteLine("Bitkiler güneşe yönelir"); // uyaranlara tepkiyi override ettik
+        }
     }
 
     // Bitkiler sınıfının fotosentez özelliğini dışarıya kapatıp sadece miras alınan sınıflarda kullanmak istediğim için protected yaptım kalıtım kullanılmadan protected method çağırılamaz. Protected methodu miras bıraktığımız class içerisinde çağırabilmek constructor içinde base fonksiyonunu kullanmamız gerekiyor
@@ -19,6 +23,7 @@ namespace OOP
             base.Solunum();
             base.Bosaltım();
             base.Beslenme();
+            base.UyaranlaraTepki();
         }
         public void TohumlaÇoğalma(){
             Console.WriteLine("Tohumla çoğalır");

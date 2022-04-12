@@ -6,17 +6,12 @@ namespace OOP{
             
             Console.WriteLine("***Tohumlu Bitki***");
             TohumluBitkiler tohumluBitki = new TohumluBitkiler(); // tohumlu bitkiler çağırıldığında kendi constructorunun içerisindeki tüm methodlar çalışır.
-            //tohumluBitki.Beslenme(); // canlı sınıfından geldi
-            //tohumluBitki.Fotosentez();// bitki sınıfından protected method, sınıf türetildiğinde çalışır
-            //tohumluBitki.Bosaltım();   // canlı sınıfından 
-            tohumluBitki.TohumlaÇoğalma(); // kendi sınıfından
+            tohumluBitki.TohumlaÇoğalma();
 
             Console.WriteLine("***Martı***");
-            Kuslar marti = new Kuslar();
+            Kuslar marti = new Kuslar(); // Kuslar çağırıldığında kendi constructorunun içerisindeki tüm methodlar çalışır.
             marti.Uçmak();      // Kendi sınıfından
             marti.Adaptasyon(); // hayvanlar sınıfından
-            //marti.Bosaltım();   // Canlı sınıfından
-            //marti.Solunum();     // Canlı sınıfından*/
         }
     }
 }

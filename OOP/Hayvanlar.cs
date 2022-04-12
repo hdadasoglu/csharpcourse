@@ -5,6 +5,11 @@ namespace OOP
         public void Adaptasyon(){
             Console.WriteLine("Adaptasyon Yeteneği");
         }
+        public override void UyaranlaraTepki()
+        {
+            base.UyaranlaraTepki();
+            Console.WriteLine("Hayvanlar kaçar");
+        }
     }
     public class Sürüngenler:Hayvanlar{
         public Sürüngenler(){
@@ -21,6 +26,7 @@ namespace OOP
             base.Solunum();
             base.Bosaltım();
             base.Beslenme();
+            base.UyaranlaraTepki();
         }
         public void Uçmak(){
             Console.WriteLine("Uçar");
