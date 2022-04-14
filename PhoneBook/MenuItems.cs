@@ -19,7 +19,7 @@ namespace PhoneBook
             switch (value)
             {
                     case 1:
-                        Rehber.Ekle();
+                        Rehber.KayıtEkle();
                         break;
                     /*case 2:
                         KayıtSil();
@@ -29,10 +29,10 @@ namespace PhoneBook
                         break;
                     case 4:
                         KayıtListele();
-                        break;
-                    case 5:
-                        AramaYap();
                         break;*/
+                    case 5:
+                        Rehber.AramaYap(Console.ReadLine());
+                        break;
                     default:
                         Console.WriteLine("Value değerinde hata var");
                         break;
