@@ -15,13 +15,17 @@ namespace PhoneBook
             MenuOku();
         }
         public static void MenuOku(){
-            int value = Convert.ToInt32(Console.ReadLine());
-            if (Check.CheckMenuItems(value))
+            try
             {
-                MenuItems.SecimYap(value);
+                int value = Convert.ToInt32(Console.ReadLine());
+                if (Check.CheckMenuItems(value))
+                    MenuItems.SecimYap(value);
+                else
+                    Yazdır();
             }
-            else
+            catch (Exception)
             {
+                Check.CheckMenuItems(0);
                 Yazdır();
             }
         }

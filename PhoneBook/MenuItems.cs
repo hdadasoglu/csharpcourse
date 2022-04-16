@@ -10,9 +10,9 @@ namespace PhoneBook
             "5. Rehberde Arama Yap"
         };
         public static string[] ogeler={
-            "Lütfen İsim Giriniz        :",
-            "Lütfen Soy İsim Giriniz    :",
-            "Lütfen Numara Giriniz      :"
+            "Lütfen İsim Giriniz        : ",
+            "Lütfen Soy İsim Giriniz    : ",
+            "Lütfen Numara Giriniz      : "
         };
         public static void SecimYap(int value){
             Rehber rehber = new Rehber();
@@ -21,17 +21,17 @@ namespace PhoneBook
                     case 1:
                         Rehber.KayıtEkle();
                         break;
-                    /*case 2:
-                        KayıtSil();
+                    case 2:
+                        Rehber.KayıtSil();
                         break;
                     case 3:
-                        KayıtGüncelle();
+                        Rehber.KayıtGüncelle();
                         break;
                     case 4:
-                        KayıtListele();
-                        break;*/
+                        Rehber.Listele();
+                        break;
                     case 5:
-                        Rehber.AramaYap(Console.ReadLine());
+                        Rehber.KayıtBul();
                         break;
                     default:
                         Console.WriteLine("Value değerinde hata var");

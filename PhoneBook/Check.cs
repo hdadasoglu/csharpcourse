@@ -12,7 +12,6 @@ namespace PhoneBook
         public static bool CheckMenuItems(int i){
             if(i<1 || i>MenuItems.menuler.Length){
                 Console.WriteLine("Hatalı giriş");
-                Consol.Sleep(2);
                 return false;
             }else
                 return true;
